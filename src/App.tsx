@@ -2,6 +2,7 @@ import "./App.css";
 import Table from "./Components/Table";
 import { useEffect, useState } from "react";
 import { Item } from "./Components/models/Item";
+import Chart from "./Components/Chart";
 
 function App() {
   const [items, setItems] = useState<Item[]>([]);
@@ -20,7 +21,11 @@ function App() {
     return data;
   };
 
-  return <div className="App">{<Table items={items} />}</div>;
+  return <div className="App">
+    
+    {<Table items={items} />}
+      {<Chart />}
+  </div>;
 }
 
 export default App;
